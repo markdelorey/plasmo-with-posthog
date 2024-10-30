@@ -1,16 +1,18 @@
 {
   "name": "plasmo-with-posthog",
-  "displayName": "Plasmo with posthog",
+  "displayName": "Plasmo with PostHog",
   "version": "0.0.1",
-  "description": "Plasmo boilerplate with PostHog analytics and session replay",
-  "author": "Mark Delorey <mark.delorey@gmail.com>",
+  "description": "Plasmo boilerplate with PostHog injected onto the browser page",
+  "author": "Mark Delorey <mark.delorey@gmail.com",
   "scripts": {
     "dev": "plasmo dev",
     "build": "plasmo build",
     "package": "plasmo package"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "plasmo": "0.89.3",
+    "posthog-js": "^1.177.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
