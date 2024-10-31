@@ -1,5 +1,5 @@
 # Plasmo with PostHog
-Browser extension built with [Plasmo](https://docs.plasmo.com/) to inject PostHug on pages including session replays.
+Boilerplate browser extension built with [Plasmo](https://docs.plasmo.com/) to inject PostHug on pages including session replays.
 
 ## Installation and development
 

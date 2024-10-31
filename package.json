@@ -12,7 +12,7 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "plasmo": "0.89.3",
-    "posthog-js": "^1.177.0",
+    "posthog-js": "^1.179.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

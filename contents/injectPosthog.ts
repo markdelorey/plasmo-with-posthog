@@ -1,8 +1,7 @@
 // contents/injectPosthog.ts
 // @plasmohq/content-script
 // @match <all_urls>
-import posthog from "posthog-js";
-import rrwebRecord from "posthog-js/dist/recorder"
+import posthog from 'posthog-js/dist/module.full.no-external'
 
 import type { PlasmoCSConfig } from "plasmo"
 
@@ -12,6 +11,7 @@ export const config: PlasmoCSConfig = {
 
 posthog.init(process.env.PLASMO_PUBLIC_POSTHOG_API_KEY, {
   api_host: "https://app.posthog.com",
+  persistence: "localStorage",
   autocapture: true,
   disable_session_recording: false,
   capture_pageview: true,
@@ -21,9 +21,4 @@ posthog.init(process.env.PLASMO_PUBLIC_POSTHOG_API_KEY, {
       domain: window.location.hostname
     });
   }
-});
-
-// Start the recorder if session recording is enabled
-rrwebRecord({
-  emit: (event) => posthog.capture('$snapshot', { event })
 });
